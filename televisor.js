@@ -69,7 +69,7 @@ function bajarVolumen() {
     if (televisor.volumen > 1) {
       televisor.volumen -= 1;
       mostrarObjeto();
-    }
+    }else
     if (televisor.volumen == 1) {
       console.log("El volumen ya esta al mínimo.");
     }
@@ -84,7 +84,7 @@ function subirCanal() {
   if (televisor.canal < 100) {
     televisor.canal += 1;
     mostrarObjeto();
-  }
+  }else
   if (televisor.canal == 100) {
     console.log("Canal 100 alcanzado, ya no hay más.");
   }

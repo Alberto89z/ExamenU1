@@ -49,7 +49,12 @@ function encenderTelevisor() {
 
 function subirVolumen() {
   if (televisor.volumen == 0) {
-    televisor.volumen = 1;
+    televisor.volumen = volumenAnterior;
+    if (televisor.volumen == 10) {
+      console.log("volumen al máximo");
+    }else{
+      televisor.volumen += 1;
+    }
     televisor.muteo = false;
     mostrarObjeto();
   } else {

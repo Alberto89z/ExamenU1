@@ -45,7 +45,6 @@ function encenderTelevisor() {
     image.setAttribute("src","https://th.bing.com/th/id/R.cd52c26ff986ccfc3a1cdf53e48c46ac?rik=%2feCMyrhkIxnUSA&riu=http%3a%2f%2fimages.4ever.eu%2fdata%2fdownload%2flogos%2fplaystation-190384.jpg%3fno-logo&ehk=2RFl51jXhlqgU2UCb%2fR6WKm392nr0JWH7%2f37Yuhb%2fNg%3d&risl=&pid=ImgRaw&r=0");
     console.log("Televisor apagado");
   }
-  mostrarObjeto();
 }
 
 function subirVolumen() {
@@ -54,11 +53,11 @@ function subirVolumen() {
     televisor.muteo = false;
     mostrarObjeto();
   } else {
-    if (televisor.volumen < 7) {
+    if (televisor.volumen < 10) {
       televisor.volumen += 1;
       mostrarObjeto();
-    }
-    if (televisor.volumen == 7) {
+    }else
+    if (televisor.volumen == 10) {
       console.log("volumen al máximo");
     }
   }
@@ -75,8 +74,8 @@ function bajarVolumen() {
     }
   }else{
         televisor.muteo = false;
-        televisor.volumen = 1;
-        console.log("El volumen ya está al mínimo.");
+        televisor.volumen = volumenAnterior -1;
+        mostrarObjeto();
   }
   
 }
